@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621080804e414eef91e46e3e10e393f9, type: 3}
+  m_Name: Major Depressive Disorder
+  m_EditorClassIdentifier: 
+  displayName: Major Depressive Disorder
+  coreSymptoms:
+  - {fileID: 11400000, guid: f830ba42758fe426a86e33ea2284c326, type: 2}
+  - {fileID: 11400000, guid: 5ef314db30a30c9c3955a09109a43cf5, type: 2}
+  supportingSymptoms:
+  - {fileID: 11400000, guid: fce458b436d33c8b0a6d2c17b91bc0c7, type: 2}
+  - {fileID: 11400000, guid: cab906adde5268e5e943102d6b771e61, type: 2}
+  - {fileID: 11400000, guid: acd10a9fc14be15148f7f765537f170f, type: 2}
+  - {fileID: 11400000, guid: 9bf5c8ec4c49983eebc733bacdb8cf23, type: 2}
+  forbiddenSymptoms:
+  - {fileID: 11400000, guid: c6284ca49f3aa92f8979c35cb21fd513, type: 2}
+  - {fileID: 11400000, guid: c31fe85f92dcbdb4d9fdb6b60bdf733f, type: 2}

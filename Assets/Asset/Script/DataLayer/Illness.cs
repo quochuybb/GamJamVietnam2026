@@ -5,6 +5,7 @@ using UnityEngine;
 public class IllnessSO : ScriptableObject
 {
     public string displayName; 
-    [TextArea] public string description; 
-    public List<SymptomSO> keySymptoms; 
+    public List<SymptomSO> coreSymptoms ; 
+    public List<SymptomSO> supportingSymptoms ;
+    public List<SymptomSO> forbiddenSymptoms ;
 }

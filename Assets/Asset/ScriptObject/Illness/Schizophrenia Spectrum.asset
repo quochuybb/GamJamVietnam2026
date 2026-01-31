@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621080804e414eef91e46e3e10e393f9, type: 3}
+  m_Name: Schizophrenia Spectrum
+  m_EditorClassIdentifier: 
+  displayName: Schizophrenia Spectrum
+  coreSymptoms:
+  - {fileID: 11400000, guid: a6e8d5bd4285b7560af0ede707445246, type: 2}
+  supportingSymptoms:
+  - {fileID: 11400000, guid: 9bf5c8ec4c49983eebc733bacdb8cf23, type: 2}
+  - {fileID: 11400000, guid: cab906adde5268e5e943102d6b771e61, type: 2}
+  - {fileID: 11400000, guid: fce458b436d33c8b0a6d2c17b91bc0c7, type: 2}
+  - {fileID: 11400000, guid: 6db69bc5f96b040359b63a50a966bead, type: 2}
+  forbiddenSymptoms:
+  - {fileID: 11400000, guid: c6284ca49f3aa92f8979c35cb21fd513, type: 2}

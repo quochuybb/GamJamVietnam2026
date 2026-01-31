@@ -1,11 +1,11 @@
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewCharacter", menuName = "Game/Character Profile")]
-public class CharacterProfileSO : ScriptableObject
+public class PatientProfileSO : ScriptableObject
 {
     public string id;
     public TextAsset inkJSONAsset;
-    public Sprite avatar;
+    public Sprite body;
     public Sprite mask;
     public Emotion emotion;
     public int maxOverload;

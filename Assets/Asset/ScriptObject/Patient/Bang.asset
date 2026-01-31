@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d61f31116d848238c7f2651416f0c5f, type: 3}
+  m_Name: Bang
+  m_EditorClassIdentifier: 
+  id: Bang
+  inkJSONAsset: {fileID: 0}
+  body: {fileID: -3250558730331523602, guid: c3181a40649e59565b1ec13d3c6239cd, type: 3}
+  mask: {fileID: 3027132054587284189, guid: feae9d1b7c4992c1980db2ce4bd4443a, type: 3}
+  emotion: 1
+  maxOverload: 100
+  difficulty: 1
+  trueIllness:
+  - {fileID: 11400000, guid: a94dc7f5c5feacd5c957d47870f2253c, type: 2}

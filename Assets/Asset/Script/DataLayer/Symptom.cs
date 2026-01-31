@@ -5,4 +5,6 @@ public class SymptomSO : ScriptableObject
 {
     public string id;
     public string displayName; 
+    public string discription; 
+
 }

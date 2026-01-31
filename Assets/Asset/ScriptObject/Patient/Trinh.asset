@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d61f31116d848238c7f2651416f0c5f, type: 3}
+  m_Name: Trinh
+  m_EditorClassIdentifier: 
+  id: Trinh
+  inkJSONAsset: {fileID: 0}
+  body: {fileID: -2845738326914608317, guid: c04f334d518e62e1da3b30a209d23ef6, type: 3}
+  mask: {fileID: -4600470357763694275, guid: 4f72b342625047d0eb549da3810602c4, type: 3}
+  emotion: 0
+  maxOverload: 100
+  difficulty: 1
+  trueIllness:
+  - {fileID: 11400000, guid: f14bda884b75d4cb5b242bd1db93fa1c, type: 2}
+  - {fileID: 11400000, guid: 35506c7e2764cb15d9fef194c5831add, type: 2}
