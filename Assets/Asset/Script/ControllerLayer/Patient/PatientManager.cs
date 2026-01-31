@@ -16,7 +16,7 @@ public class PatientManager : Singleton<PatientManager>
     private PatientVisual patientVisual;
     private int currentIndex = 0;
 
-    private void Awake()
+    public void FirstPatientGoIn()
     {
         if (patientPrefab != null)
         {
@@ -24,10 +24,6 @@ public class PatientManager : Singleton<PatientManager>
             patientVisual = patientInstance.GetComponent<PatientVisual>();
             patientInstance.SetActive(false); 
         }
-    }
-
-    private void Start()
-    {
         NextPatient();
     }
 

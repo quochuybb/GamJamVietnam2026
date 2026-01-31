@@ -3,7 +3,7 @@ VAR overload_meter = 0.0
 EXTERNAL SetSpriteState(stateName) 
 
 EXTERNAL SetNotebookActive(isActive)      
-EXTERNAL SetMedicalRecordActive(isActive) 
+ 
 
 
 -> Start_Interaction
@@ -25,13 +25,10 @@ Patient: "Nè ông nghe gì không?"
 Patient: "Bắt đầu khám đi chứ?"
 
 // [Medical Record Appear] -> Mở ra cho người chơi thấy list triệu chứng
-~ SetMedicalRecordActive(true) 
-Bác sĩ: (Đọc danh sách triệu chứng và quan sát...)
-~ SetMedicalRecordActive(false)
 
 // [Notebook Appear]
 ~ SetNotebookActive(true)
-Bác sĩ: (Chuẩn bị ghi chép...)
+Bác sĩ: (Đọc danh sách triệu chứng và quan sát...)
 ~ SetNotebookActive(false)
 
 -> Surface_Story_Stage
@@ -90,20 +87,20 @@ Doctor: (Chọn câu hỏi đào sâu)
     -> Middle_Choice_C
 
 = Middle_Choice_A
-    ~ SetSpriteState("Disgust")
+    ~ SetSpriteState("disgust")
     ~ overload_meter = overload_meter - 10
     Patient: "Anh đang ganh tị với tôi à?"
     Patient: "8 tiếng của anh chỉ để nằm như một kẻ vô dụng. Trong khi đó tôi có thể thức và vượt qua anh cả ngàn lần."
     -> End_Story_Stage
 
 = Middle_Choice_B
-    ~ SetSpriteState("Happy")
+    ~ SetSpriteState("happy")
     ~ overload_meter = overload_meter + 0.5
     Patient: "Đương nhiên, ai cần ngủ chứ!"
     -> End_Story_Stage
 
 = Middle_Choice_C
-    ~ SetSpriteState("Happy")
+    ~ SetSpriteState("happy")
     ~ overload_meter = overload_meter + 0.5
     Patient: "Đương nhiên! Tôi đã vẽ ra những bức tranh nơi mà Chúa cũng muốn mua một bức vì sự tuyệt vời của nó."
     -> End_Story_Stage
@@ -127,20 +124,20 @@ Doctor: (Chọn câu hỏi chốt hạ)
     -> End_Choice_C
 
 = End_Choice_A
-    ~ SetSpriteState("Disgust")
+    ~ SetSpriteState("disgust")
     ~ overload_meter = overload_meter - 10
     Patient: "Vậy là anh cũng giống những con người thấp kém đó luôn gọi tôi là lười biếng..."
     Patient: "Những người như anh sẽ không bao giờ hiểu được vẻ đẹp do tôi tạo ra."
     -> Ready_For_Diagnose
 
 = End_Choice_B
-    ~ SetSpriteState("Happy")
+    ~ SetSpriteState("happy")
     ~ overload_meter = overload_meter + 0.5
     Patient: "Mĩ thuật là sự đổi mới, là tiến bộ, chúng ta không thể cứ cổ hủ như thế mãi được."
     -> Ready_For_Diagnose
 
 = End_Choice_C
-    ~ SetSpriteState("Happy")
+    ~ SetSpriteState("happy")
     ~ overload_meter = overload_meter + 0.5
     Patient: "Tôi đã cứu vô số kể."
     Patient: "Nghệ thuật của tôi có thể cứu và lưu lại toàn bộ nỗ lực của nhân loại, thậm chí cải thiện nó và làm nó tốt hơn trước đó ngàn lần."

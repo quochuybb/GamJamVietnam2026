@@ -8,14 +8,13 @@ using Ink.Runtime;
 public class InterrogationManager : Singleton<InterrogationManager>
 {
     [SerializeField] private TextMeshProUGUI dialogueText; 
+    [SerializeField] private TextMeshProUGUI indentityDialogueText; 
     [SerializeField] private Transform choiceContainer;    
     [SerializeField] private Button choiceButtonPrefab;   
     [SerializeField] private Slider overloadSlider;   
 
     [Header("External References")]
     [SerializeField] private PatientManager patientManager; 
-    [SerializeField] private GameObject notebookPanel;    
-    [SerializeField] private GameObject medicalRecordPanel;
     [SerializeField] private Button continueButton; 
 
     private Story _story;
@@ -50,7 +49,9 @@ public class InterrogationManager : Singleton<InterrogationManager>
                 HandleSpecialTags(line.Trim());
                 return;
             }
-            dialogueText.text = line;
+            string[] lines = line.Split(": ");
+            indentityDialogueText.text = lines[0];
+            dialogueText.text = lines[1];
         }
         else if (_story.currentChoices.Count > 0)
         {
@@ -82,10 +83,8 @@ public class InterrogationManager : Singleton<InterrogationManager>
             Debug.Log($"Ink gọi đổi Sprite: {stateName}");
         });
         _story.BindExternalFunction("SetNotebookActive", (bool isActive) => {
-            if(notebookPanel != null) notebookPanel.SetActive(isActive);
-        });
-        _story.BindExternalFunction("SetMedicalRecordActive", (bool isActive) => {
-            if(medicalRecordPanel != null) medicalRecordPanel.SetActive(isActive);
+            DiagnosisManager.Instance.TakeNoteBook();
+            
         });
     }
     private void CreateChoiceButtons()

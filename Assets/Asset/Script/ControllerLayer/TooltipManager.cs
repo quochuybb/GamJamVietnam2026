@@ -7,9 +7,11 @@ public class TooltipManager : Singleton<TooltipManager>
     [SerializeField] private GameObject tooltipObject;
     [SerializeField] private TextMeshProUGUI descriptionText;
     [SerializeField] private RectTransform tooltipRect;
-    
-    // Thêm tham chiếu đến Canvas chính
-    [SerializeField] private Canvas mainCanvas; 
+    [SerializeField] private Canvas mainCanvas;
+
+    [Header("Settings")]
+    // X âm = sang trái, Y dương = đi lên. Bạn có thể chỉnh số này trong Inspector
+    [SerializeField] private Vector2 tooltipOffset = new Vector2(50f, 100f); 
 
     private void Awake()
     {
@@ -28,21 +30,24 @@ public class TooltipManager : Singleton<TooltipManager>
     {
         Vector2 mousePos = Input.mousePosition;
 
-        // 1. Tính toán Pivot thông minh (giữ nguyên logic của bạn để tooltip không tràn màn hình)
+        // 1. Pivot Logic (Giữ nguyên)
         float pivotX = mousePos.x / Screen.width;
         float pivotY = mousePos.y / Screen.height;
         tooltipRect.pivot = new Vector2(pivotX, pivotY);
 
-        // 2. CHUYỂN ĐỔI TỌA ĐỘ CHUẨN (The Magic Fix)
+        // 2. Chuyển đổi tọa độ
         Vector2 localPoint;
         RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            mainCanvas.transform as RectTransform, // Lấy khung hình chữ nhật của Canvas cha
-            mousePos,                              // Vị trí chuột
-            mainCanvas.worldCamera,                // Camera render UI (null nếu là Overlay)
-            out localPoint                         // Kết quả trả về
+            mainCanvas.transform as RectTransform,
+            mousePos,
+            mainCanvas.worldCamera,
+            out localPoint
         );
 
-        // 3. Gán vị trí cục bộ thay vì vị trí thế giới
+        // 3. THÊM OFFSET TẠI ĐÂY (Sửa đổi mới)
+        // Cộng thêm khoảng cách bạn muốn vào vị trí chuột đã tính toán
+        localPoint += tooltipOffset;
+
         tooltipObject.transform.localPosition = localPoint;
     }
 
@@ -50,7 +55,7 @@ public class TooltipManager : Singleton<TooltipManager>
     {
         descriptionText.text = content;
         tooltipObject.SetActive(true);
-        SetTooltipPosition(); // Cập nhật vị trí ngay lập tức để tránh nháy hình
+        SetTooltipPosition();
     }
 
     public void HideTooltip()
