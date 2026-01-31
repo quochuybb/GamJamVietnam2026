@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4f72b342625047d0eb549da3810602c4
+guid: 36be2881f3b12e851bde952d50976de0
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -36,7 +36,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 16
+    spritePixelsToUnits: 100
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639054628265461580
+  platformSettingsDirtyTick: 0
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,18 +122,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: mask anger
+  - name: 84x70
     originalName: 
-    pivot: {x: 0.19047622, y: -2.6153848}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 21
-      height: 26
-    spriteID: 84d552db153a07b878860ecf1bf37d87
+      width: 84
+      height: 70
+    spriteID: 5385ab85ae8264f978f932adf8757628
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -146,25 +146,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1405343639
+      value0: 4262603699
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: mask anger
+    name: 84x70
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: mask anger
+    - name: 84x70
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 71
-        y: 68
-        width: 21
-        height: 26
-      spriteId: 84d552db153a07b878860ecf1bf37d87
+        x: 0
+        y: 0
+        width: 84
+        height: 70
+      spriteId: 5385ab85ae8264f978f932adf8757628
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -180,32 +180,8 @@ ScriptedImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     androidETC2FallbackOverride: 0
-  - name: DefaultTexturePlatform
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 16384
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
-  - name: Standalone
-    overridden: 0
-    ignorePlatformSupport: 0
-    maxTextureSize: 16384
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 150, y: 150}
-  previousTextureSize: {x: 32, y: 64}
+  canvasSize: {x: 84, y: 70}
+  previousTextureSize: {x: 128, y: 128}
