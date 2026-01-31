@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Asset.Script.ControllerLayer;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -81,6 +82,7 @@ public class DiagnosisManager : Singleton<DiagnosisManager>
 
     public void ToggleSymptom(SymptomSO symptom, Button button)
     {
+        AudioManager.Instance.PlayButtonTick();
         if (!selectedSymptoms.Contains(symptom))
         {
             button.image.sprite = tickBoxImages[0];
@@ -144,6 +146,7 @@ public class DiagnosisManager : Singleton<DiagnosisManager>
 
     public void ToggleIllnessSelection(IllnessSO illness, Button button)
     {
+        AudioManager.Instance.PlayButtonTick();
         if (!tempSelectedIllnesses.Contains(illness))
         {
             tempSelectedIllnesses.Add(illness);
@@ -219,13 +222,15 @@ public class DiagnosisManager : Singleton<DiagnosisManager>
     private void GameWin()
     {
         Debug.Log("🏆 BẠN ĐÃ THẮNG!");
+        PatientManager.Instance.PlayWinCutscene();
         PatientManager.Instance.NextPatient();
 
     }
     private void GameOver(string reason)
     {
         Debug.Log("💀 GAME OVER: " + reason);
-        // Hiển thị UI thua cuộc tại đây
+        MainPanelController.Instance.OnBackToMainMenu();
+        
     }
     
     public void TakeNoteBook()
@@ -244,6 +249,7 @@ public class DiagnosisManager : Singleton<DiagnosisManager>
             Book.SetActive(true);
             symptomsContainer.gameObject.SetActive(false);
             isClosed = false;
+            AudioManager.Instance.PlayButtonClose();
         }
     }
 

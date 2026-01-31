@@ -5,7 +5,7 @@ namespace Asset.Script.ControllerLayer
     using UnityEngine;
     using DG.Tweening; // Bắt buộc
 
-    public class MainPanelController : MonoBehaviour
+    public class MainPanelController : Singleton<MainPanelController> 
     {
         [Header("Panels")]
         [SerializeField] private RectTransform mainMenuPanel;
@@ -36,17 +36,31 @@ namespace Asset.Script.ControllerLayer
             boookButton.gameObject.SetActive(true);
 
         }
-
-
         public void OnBackToMainMenu()
         {
-            boookButton.gameObject.SetActive(false);
+            // 1. Reset logic các Manager
+            PatientManager.Instance.ResetManager();
+            DiagnosisManager.Instance.ResetDiagnosisUI();
+            InterrogationManager.Instance.ResetInterrogation();
 
-            mainMenuPanel.DOAnchorPosY(0, tweenDuration)
-                .SetEase(transitionEase);
-            gameplayPanel.DOAnchorPosY(-screenHeight, tweenDuration)
-                .SetEase(transitionEase);
+            // 2. Reset UI
+            if (boookButton != null) boookButton.gameObject.SetActive(false);
 
+            // 3. Tween quay về menu
+            mainMenuPanel.DOAnchorPosY(0, tweenDuration).SetEase(transitionEase);
+            gameplayPanel.DOAnchorPosY(-screenHeight, tweenDuration).SetEase(transitionEase);
+        }
+            public void OnQuitGame()
+            {
+                Debug.Log("Đang thoát game...");
+
+                // Thoát ứng dụng (Dành cho bản Build chính thức)
+                Application.Quit();
+
+                // Dòng này giúp nút thoát hoạt động ngay cả khi bạn đang chạy thử trong Unity Editor
+            #if UNITY_EDITOR
+                        UnityEditor.EditorApplication.isPlaying = false;
+            #endif
         }
     }
 }

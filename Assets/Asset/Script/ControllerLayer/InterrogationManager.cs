@@ -147,4 +147,12 @@ public class InterrogationManager : Singleton<InterrogationManager>
             Destroy(child.gameObject);
         }
     }
+    public void ResetInterrogation()
+    {
+        dialogueText.text = "";
+        indentityDialogueText.text = "";
+        ClearChoices(); // Hàm này bạn đã có sẵn để xóa các nút Choice
+        if (continueButton != null) 
+            continueButton.gameObject.SetActive(false);
+    }
 }
