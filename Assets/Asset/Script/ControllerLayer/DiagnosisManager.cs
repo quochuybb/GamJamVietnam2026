@@ -218,10 +218,10 @@ public class DiagnosisManager : Singleton<DiagnosisManager>
     
     private void GameWin()
     {
-        Debug.Log("🏆 BẠN ĐÃ THẮNG! Chẩn đoán hoàn toàn chính xác.");
-        // Hiển thị UI thắng cuộc tại đây
-    }
+        Debug.Log("🏆 BẠN ĐÃ THẮNG!");
+        PatientManager.Instance.NextPatient();
 
+    }
     private void GameOver(string reason)
     {
         Debug.Log("💀 GAME OVER: " + reason);
@@ -261,6 +261,43 @@ public class DiagnosisManager : Singleton<DiagnosisManager>
         symptomsParent.gameObject.SetActive(false);
         isClosed = true;
         Book.SetActive(false); 
+    }
+    
+    public void ResetDiagnosisUI()
+    {
+        // 1. Xóa danh sách đã chọn
+        selectedSymptoms.Clear();
+        tempSelectedIllnesses.Clear();
+        selectedIllnesses.Clear();
+
+        // 2. Ẩn các Panel và Nút
+        if (panelScreen != null) panelScreen.SetActive(false);
+        if (confirmButton != null) confirmButton.gameObject.SetActive(false);
+        if (analyzeButton != null) analyzeButton.SetActive(false);
+        if (symptomsContainer != null) symptomsContainer.SetActive(false);
+    
+        // 3. Đưa Notebook về trạng thái đóng
+        isClosed = true;
+        if (Book != null) Book.SetActive(false);
+
+        // 4. Reset các Tickbox trên UI (Quan trọng)
+        // Bạn cần reset thủ công các Image của Symptom buttons về tickBoxImages[1] (không tick)
+        ResetSymptomButtonsUI();
+    }
+
+    private void ResetSymptomButtonsUI()
+    {
+        // Duyệt qua tất cả các button con trong Parent để đổi lại Sprite
+        foreach (Transform child in symptomsParent)
+        {
+            var btn = child.GetComponent<Button>();
+            if (btn != null) btn.image.sprite = tickBoxImages[1];
+        }
+        foreach (Transform child in symptomsParent1)
+        {
+            var btn = child.GetComponent<Button>();
+            if (btn != null) btn.image.sprite = tickBoxImages[1];
+        }
     }
 
 }

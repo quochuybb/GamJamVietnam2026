@@ -9,7 +9,9 @@ public class PatientManager : Singleton<PatientManager>
     public GameObject patientPrefab;
     public Transform spawnPoint;
     public Sprite[] patientSprites;
-
+    [Header("UI Fader")]
+    [SerializeField] private CanvasGroup faderCanvasGroup; // Kéo thả Canvas Group của Image đen vào đây
+    [SerializeField] private float fadeDuration = 0.8f;
     [Header("Systems")]
 
     private GameObject patientInstance; 
@@ -34,27 +36,58 @@ public class PatientManager : Singleton<PatientManager>
 
     private IEnumerator SwitchPatientRoutine()
     {
-        if (patientInstance.activeSelf)
+        // 1. Fade OUT (Màn hình tối dần)
+        yield return StartCoroutine(Fade(1f));
+
+        // 2. Reset UI và Dữ liệu cũ trong lúc màn hình đang tối
+        DiagnosisManager.Instance.ResetDiagnosisUI();
+
+        if (patientInstance != null && patientInstance.activeSelf)
         {
             patientInstance.SetActive(false);
-            yield return new WaitForSeconds(0.5f); 
         }
 
+        // 3. Chuẩn bị bệnh nhân mới
         if (currentIndex < dailyPatientList.Count)
         {
             PatientProfileSO nextData = dailyPatientList[currentIndex];
-
             patientVisual.PrepareData(nextData);
+            
+            // Đợi một chút tạo cảm giác bệnh nhân mới bước vào
+            yield return new WaitForSeconds(0.5f);
 
             patientInstance.SetActive(true);
             InterrogationManager.Instance.StartSession(nextData);
             
             currentIndex++;
+
+            // 4. Fade IN (Màn hình sáng lại)
+            yield return StartCoroutine(Fade(0f));
         }
         else
         {
             Debug.Log("Hết bệnh nhân. End Day!");
+            // Bạn có thể hiện bảng tổng kết ngày ở đây
         }
+    }
+
+    private IEnumerator Fade(float targetAlpha)
+    {
+        if (faderCanvasGroup == null) yield break;
+
+        float startAlpha = faderCanvasGroup.alpha;
+        float time = 0;
+
+        while (time < fadeDuration)
+        {
+            time += Time.deltaTime;
+            faderCanvasGroup.alpha = Mathf.Lerp(startAlpha, targetAlpha, time / fadeDuration);
+            yield return null;
+        }
+        faderCanvasGroup.alpha = targetAlpha;
+        
+        // Chặn click khi màn hình đen, cho phép click khi màn hình trong suốt
+        faderCanvasGroup.blocksRaycasts = (targetAlpha > 0);
     }
 
     public void SwapMask(string mask)

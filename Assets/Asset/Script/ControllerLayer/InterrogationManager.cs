@@ -113,17 +113,33 @@ public class InterrogationManager : Singleton<InterrogationManager>
     }
     private void HandleSpecialTags(string tag)
     {
+        // Tag chốt để mở bảng chẩn đoán
         if (tag.Contains("START_DIAGNOSIS"))
         {
             Debug.Log("Hội thoại kết thúc - Cho phép chẩn đoán!");
-        
-            // Gọi hàm hiển thị nút bên DiagnosisManager
             DiagnosisManager.Instance.EnableAnalyzeButton();
-        
-            // Có thể ẩn luôn nút Continue nếu muốn
             continueButton.gameObject.SetActive(false);
         }
+        
+        // Xử lý các Ending (Bạn có thể gọi UI Win/Lose ở đây)
+        if (tag.Contains("TRUE_ENDING"))
+        {
+            Debug.Log("Kết quả: True Ending - Chị Trinh đã nhận ra sự thật.");
+            // Ví dụ: SoundManager.Instance.PlaySadMusic();
+        }
+        
+        if (tag.Contains("BAD_ENDING_TRUCK"))
+        {
+            Debug.Log("Kết quả: Bad Ending - Tai nạn giao thông.");
+            // Ví dụ: GameController.Instance.ShowEndingScreen("Bà Trinh gặp tai nạn...");
+        }
+
+        if (tag.Contains("BAD_ENDING_2"))
+        {
+            Debug.Log("Kết quả: Bad Ending 2 - Bà Trinh tự tử.");
+        }
     }
+    
     private void ClearChoices()
     {
         foreach (Transform child in choiceContainer)

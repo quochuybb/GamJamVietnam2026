@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Trinh
   m_EditorClassIdentifier: 
   id: Trinh
-  inkJSONAsset: {fileID: 0}
+  inkJSONAsset: {fileID: 4900000, guid: d98a90737e307404a87e1a0edbb9c472, type: 3}
   body: {fileID: -2845738326914608317, guid: c04f334d518e62e1da3b30a209d23ef6, type: 3}
   mask: {fileID: 3656611776773634086, guid: 04b5831c68e5e6710bfab4a9ee18c10d, type: 3}
   emotion: 3
