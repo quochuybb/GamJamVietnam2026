@@ -2,40 +2,75 @@ using UnityEngine;
 
 public class AudioManager : Singleton<AudioManager>
 {
-    AudioSource audioSource;
+    [Header("Sources")]
+    [SerializeField] private AudioSource sfxSource;
+    [SerializeField] private AudioSource bgmSource;
+
+    [Header("Menu Music")]
+    [SerializeField] private AudioClip[] menuWaitingSongs;
+
+    [Header("SFX Clips")]
     [SerializeField] private AudioClip[] audioClips;
-    private void Awake()
-    {
-        // Nếu quên không kéo vào Inspector, code sẽ tự tìm AudioSource trên cùng Object
-        if (audioSource == null) audioSource = GetComponent<AudioSource>();
+
+    private void Awake() {
+        // Tự động thiết lập nếu quên kéo vào Inspector
+        if (sfxSource == null) sfxSource = gameObject.AddComponent<AudioSource>();
+        if (bgmSource == null) {
+            bgmSource = gameObject.AddComponent<AudioSource>();
+            bgmSource.loop = true; // Nhạc nền luôn lặp lại
+        }
+    }
+
+    // --- PHẦN NHẠC NỀN (BGM) ---
+
+    public void PlayRandomMenuMusic() {
+        if (menuWaitingSongs.Length == 0) return;
+        
+        int randomIndex = Random.Range(0, menuWaitingSongs.Length);
+        bgmSource.clip = menuWaitingSongs[randomIndex];
+        bgmSource.Play();
+    }
+
+    public void PlayPatientTheme(AudioClip clip) {
+        if (clip == null) return;
+        
+        // Chỉ đổi nhạc nếu nhạc mới khác nhạc đang chạy
+        if (bgmSource.clip == clip) return;
+
+        bgmSource.clip = clip;
+        bgmSource.Play();
+    }
+
+    public void StopMusic() {
+        bgmSource.Stop();
     }
     public void PlaySoundTalk(AudioClip audioClip)
     {
-        audioSource.PlayOneShot(audioClip);
+        sfxSource.PlayOneShot(audioClip);
     }
 
     public void PlayButtonClick()
     {
-        audioSource.PlayOneShot(audioClips[0]);
+        sfxSource.PlayOneShot(audioClips[0]);
     }
     
     public void PlayButtonOpen()
     {
-        audioSource.PlayOneShot(audioClips[3]);
+        sfxSource.PlayOneShot(audioClips[3]);
     }
 
     public void PlayButtonClose()
     {
-        audioSource.PlayOneShot(audioClips[1]);
+        sfxSource.PlayOneShot(audioClips[1]);
     }
 
     public void PlayButtonTick()
     {
-        audioSource.PlayOneShot(audioClips[4]);
+        sfxSource.PlayOneShot(audioClips[4]);
     }
     public void PlayButtonCross()
     {
-        audioSource.PlayOneShot(audioClips[2]);
+        sfxSource.PlayOneShot(audioClips[2]);
     }
 
 

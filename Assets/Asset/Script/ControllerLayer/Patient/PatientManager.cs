@@ -100,6 +100,9 @@
             if (currentIndex < dailyPatientList.Count)
             {
                 PatientProfileSO nextData = dailyPatientList[currentIndex];
+                if (nextData.themeMusic != null) {
+                    AudioManager.Instance.PlayPatientTheme(nextData.themeMusic);
+                }
                 patientVisual.PrepareData(nextData);
                 
                 // Đợi một chút tạo cảm giác bệnh nhân mới bước vào

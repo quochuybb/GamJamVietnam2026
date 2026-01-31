@@ -24,6 +24,7 @@ namespace Asset.Script.ControllerLayer
             boookButton.gameObject.SetActive(false);
             mainMenuPanel.anchoredPosition = Vector2.zero;
             gameplayPanel.anchoredPosition = new Vector2(0, -screenHeight);
+            AudioManager.Instance.PlayRandomMenuMusic();
         }
         
         public void OnStartGame()
@@ -42,6 +43,7 @@ namespace Asset.Script.ControllerLayer
             PatientManager.Instance.ResetManager();
             DiagnosisManager.Instance.ResetDiagnosisUI();
             InterrogationManager.Instance.ResetInterrogation();
+            AudioManager.Instance.PlayRandomMenuMusic();
 
             // 2. Reset UI
             if (boookButton != null) boookButton.gameObject.SetActive(false);

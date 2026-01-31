@@ -12,4 +12,5 @@ public class PatientProfileSO : ScriptableObject
     public int maxOverload;
     public int difficulty;
     public List<IllnessSO> trueIllness;
+    public AudioClip themeMusic;
 }

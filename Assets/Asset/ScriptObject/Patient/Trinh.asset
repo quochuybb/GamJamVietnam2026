@@ -22,3 +22,4 @@ MonoBehaviour:
   trueIllness:
   - {fileID: 11400000, guid: f14bda884b75d4cb5b242bd1db93fa1c, type: 2}
   - {fileID: 11400000, guid: 35506c7e2764cb15d9fef194c5831add, type: 2}
+  themeMusic: {fileID: 8300000, guid: 412253ce5c013f907816310d4588f60e, type: 3}
