@@ -21,5 +21,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 986c8c1e7992fcf14897100c81b72463, type: 2}
   - {fileID: 11400000, guid: fce458b436d33c8b0a6d2c17b91bc0c7, type: 2}
   - {fileID: 11400000, guid: acd10a9fc14be15148f7f765537f170f, type: 2}
-  forbiddenSymptoms:
-  - {fileID: 11400000, guid: a6e8d5bd4285b7560af0ede707445246, type: 2}
+  forbiddenSymptoms: []
