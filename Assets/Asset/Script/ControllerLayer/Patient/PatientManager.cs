@@ -119,7 +119,7 @@
             else
             {
                 Debug.Log("Hết bệnh nhân. End Day!");
-                // Bạn có thể hiện bảng tổng kết ngày ở đây
+                
             }
         }
 

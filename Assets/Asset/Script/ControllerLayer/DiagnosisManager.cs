@@ -221,14 +221,13 @@ public class DiagnosisManager : Singleton<DiagnosisManager>
     
     private void GameWin()
     {
-        Debug.Log("🏆 BẠN ĐÃ THẮNG!");
+        Debug.Log("BẠN ĐÃ THẮNG!");
         PatientManager.Instance.PlayWinCutscene();
-        PatientManager.Instance.NextPatient();
 
     }
     private void GameOver(string reason)
     {
-        Debug.Log("💀 GAME OVER: " + reason);
+        Debug.Log("GAME OVER: " + reason);
         MainPanelController.Instance.OnBackToMainMenu();
         
     }

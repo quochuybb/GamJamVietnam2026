@@ -20,5 +20,5 @@ MonoBehaviour:
   maxOverload: 100
   difficulty: 1
   trueIllness:
-  - {fileID: 11400000, guid: a94dc7f5c5feacd5c957d47870f2253c, type: 2}
+  - {fileID: 11400000, guid: 3ccfe3e66dd0b8464ad8fe4d7dc4e49b, type: 2}
   themeMusic: {fileID: 8300000, guid: c061a0333909d3b9ba4090ad35874ec9, type: 3}
