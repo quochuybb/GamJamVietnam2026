@@ -95,8 +95,8 @@ Doctor: "..."
     Doctor: "Chị ấy hối hả rời đi. Tôi cảm thấy có điều gì đó không ổn và cần phải đưa ra quyết định."
     
     + [Hành động: Gọi điện báo cảnh sát hỗ trợ]
-        Doctor: "Cảnh sát đã đến kịp thời. Họ phát hiện thi thể người chồng đã phân hủy. Chị Trinh được đưa đi điều trị tâm thần bắt buộc."
-        >>> TRUE_ENDING_POLICE
+    Doctor: "Cảnh sát đã đến kịp thời. Họ phát hiện thi thể người chồng đã phân hủy. Chị Trinh được đưa đi điều trị tâm thần bắt buộc."
+    >>> TRUE_ENDING_POLICE
         -> Ready_For_Diagnose
         
     + [Hành động: Để chị ấy tự lo liệu]

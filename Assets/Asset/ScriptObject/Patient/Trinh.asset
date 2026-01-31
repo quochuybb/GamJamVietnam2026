@@ -21,5 +21,4 @@ MonoBehaviour:
   difficulty: 1
   trueIllness:
   - {fileID: 11400000, guid: a94dc7f5c5feacd5c957d47870f2253c, type: 2}
-  - {fileID: 11400000, guid: 35506c7e2764cb15d9fef194c5831add, type: 2}
   themeMusic: {fileID: 8300000, guid: 412253ce5c013f907816310d4588f60e, type: 3}
