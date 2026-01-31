@@ -115,8 +115,13 @@ public class InterrogationManager : Singleton<InterrogationManager>
     {
         if (tag.Contains("START_DIAGNOSIS"))
         {
-            Debug.Log("BẮT ĐẦU CHẨN ĐOÁN!");
-            // DiagnosisManager.Instance.EnableDiagnosisUI();
+            Debug.Log("Hội thoại kết thúc - Cho phép chẩn đoán!");
+        
+            // Gọi hàm hiển thị nút bên DiagnosisManager
+            DiagnosisManager.Instance.EnableAnalyzeButton();
+        
+            // Có thể ẩn luôn nút Continue nếu muốn
+            continueButton.gameObject.SetActive(false);
         }
     }
     private void ClearChoices()

@@ -15,8 +15,8 @@ MonoBehaviour:
   id: Thuan
   inkJSONAsset: {fileID: 4900000, guid: e20e9580dc3fc2503a4c298485a9817c, type: 3}
   body: {fileID: 2158002969795506081, guid: e97fc2c33d5ab7cbabbe461984d1a6f5, type: 3}
-  mask: {fileID: 3656611776773634086, guid: 04b5831c68e5e6710bfab4a9ee18c10d, type: 3}
-  emotion: 3
+  mask: {fileID: 7002171452344917096, guid: 4f72b342625047d0eb549da3810602c4, type: 3}
+  emotion: 0
   maxOverload: 100
   difficulty: 1
   trueIllness:

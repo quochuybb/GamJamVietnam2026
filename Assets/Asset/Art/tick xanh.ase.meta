@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 329c2b4a20b3a3529a75d47c51b859b5
+guid: 4fea138fd93e2af80948cee2e3652b6e
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639054988015220570
+  platformSettingsDirtyTick: 639054924151303070
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -122,18 +122,18 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 0, y: 0}
   animatedSpriteImportData:
-  - name: screen
+  - name: tick xanh
     originalName: 
-    pivot: {x: 0.5074627, y: -0.15492958}
+    pivot: {x: 0.5, y: 0}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 134
-      height: 71
-    spriteID: 2f2671aa29c5f51e2978bc7cfacfdab7
+      width: 50
+      height: 50
+    spriteID: e5fde0beac995d936a16c59ae84128ea
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -143,7 +143,7 @@ ScriptedImporter:
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
   spriteSheetImportData:
-  - name: screen_0
+  - name: tick xanh_0
     originalName: 
     pivot: {x: 0.5, y: 0.5}
     alignment: 0
@@ -152,9 +152,9 @@ ScriptedImporter:
       serializedVersion: 2
       x: 4
       y: 4
-      width: 134
-      height: 71
-    spriteID: c6e0e844d0c260fa7bbfa92ea94a30ba
+      width: 50
+      height: 50
+    spriteID: 5e2bf61d1ec2ef74b949bfa4116f8031
     spriteBone: []
     spriteOutline: []
     vertices: []
@@ -166,25 +166,25 @@ ScriptedImporter:
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1043440834
+      value0: 949308720
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: screen
+    name: tick xanh
     layerFlags: 0
     layerType: 0
     blendMode: 0
     cells:
-    - name: screen
+    - name: tick xanh
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
-        x: 12
-        y: 11
-        width: 134
-        height: 71
-      spriteId: 2f2671aa29c5f51e2978bc7cfacfdab7
+        x: 0
+        y: 0
+        width: 50
+        height: 50
+      spriteId: e5fde0beac995d936a16c59ae84128ea
     linkedCells: []
     parentIndex: -1
   platformSettings:
@@ -227,5 +227,5 @@ ScriptedImporter:
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
-  canvasSize: {x: 160, y: 90}
-  previousTextureSize: {x: 256, y: 128}
+  canvasSize: {x: 50, y: 50}
+  previousTextureSize: {x: 64, y: 64}

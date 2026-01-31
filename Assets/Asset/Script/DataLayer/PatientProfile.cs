@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewCharacter", menuName = "Game/Character Profile")]
@@ -10,5 +11,5 @@ public class PatientProfileSO : ScriptableObject
     public Emotion emotion;
     public int maxOverload;
     public int difficulty;
-    public IllnessSO[] trueIllness;
+    public List<IllnessSO> trueIllness;
 }

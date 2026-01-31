@@ -13,7 +13,8 @@ public class PatientVisual : MonoBehaviour
 
     public void PrepareData(PatientProfileSO data)
     {
-        currentData = data;
+        currentData = Instantiate(data);
+        
     }
 
     private void OnEnable()

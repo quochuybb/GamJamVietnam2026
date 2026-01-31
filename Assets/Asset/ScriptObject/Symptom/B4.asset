@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: B4
   displayName: Sleep Disturbance
-  discription: Patient has trouble sleeping or sleeps very littlePatient has trouble
-    sleeping or sleeps very little
+  discription: "B\u1EC7nh nh\xE2n g\u1EB7p kh\xF3 kh\u0103n khi ng\u1EE7 ho\u1EB7c
+    ng\u1EE7 r\u1EA5t \xEDt"

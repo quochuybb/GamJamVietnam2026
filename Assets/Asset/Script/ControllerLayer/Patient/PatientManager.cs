@@ -13,7 +13,7 @@ public class PatientManager : Singleton<PatientManager>
     [Header("Systems")]
 
     private GameObject patientInstance; 
-    private PatientVisual patientVisual;
+    public PatientVisual patientVisual;
     private int currentIndex = 0;
 
     public void FirstPatientGoIn()
