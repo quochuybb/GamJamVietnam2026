@@ -10,7 +10,7 @@ public class InterrogationManager : Singleton<InterrogationManager>
     [SerializeField] private TextMeshProUGUI dialogueText; 
     [SerializeField] private Transform choiceContainer;    
     [SerializeField] private Button choiceButtonPrefab;   
-    [SerializeField] private Slider overloadSlider;       
+    [SerializeField] private Slider overloadSlider;   
 
     [Header("External References")]
     [SerializeField] private PatientManager patientManager; 
@@ -39,7 +39,6 @@ public class InterrogationManager : Singleton<InterrogationManager>
         if (_story.canContinue)
         {
             string line = _story.Continue();
-
             if (string.IsNullOrWhiteSpace(line))
             {
                 AdvanceStory();

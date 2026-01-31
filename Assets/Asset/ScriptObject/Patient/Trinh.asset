@@ -15,8 +15,8 @@ MonoBehaviour:
   id: Trinh
   inkJSONAsset: {fileID: 0}
   body: {fileID: -2845738326914608317, guid: c04f334d518e62e1da3b30a209d23ef6, type: 3}
-  mask: {fileID: -4600470357763694275, guid: 4f72b342625047d0eb549da3810602c4, type: 3}
-  emotion: 0
+  mask: {fileID: 3656611776773634086, guid: 04b5831c68e5e6710bfab4a9ee18c10d, type: 3}
+  emotion: 3
   maxOverload: 100
   difficulty: 1
   trueIllness:

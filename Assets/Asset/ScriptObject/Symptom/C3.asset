@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: C3
   m_EditorClassIdentifier: 
   id: C3
-  displayName: Delusions / False Beliefs
+  displayName: 'Delusions '
   discription: Patient believes something clearly not real

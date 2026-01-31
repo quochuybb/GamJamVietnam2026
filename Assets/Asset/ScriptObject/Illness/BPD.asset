@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 621080804e414eef91e46e3e10e393f9, type: 3}
+  m_Name: BPD
+  m_EditorClassIdentifier: 
+  displayName: BPD
+  coreSymptoms:
+  - {fileID: 11400000, guid: 986c8c1e7992fcf14897100c81b72463, type: 2}
+  - {fileID: 11400000, guid: 18b678ad1eeb2f61c81c69902407fcf5, type: 2}
+  supportingSymptoms:
+  - {fileID: 11400000, guid: c2d5a81bf01c01103a7e25f2f0c1fc6a, type: 2}
+  - {fileID: 11400000, guid: acd10a9fc14be15148f7f765537f170f, type: 2}
+  forbiddenSymptoms:
+  - {fileID: 11400000, guid: c6284ca49f3aa92f8979c35cb21fd513, type: 2}
+  - {fileID: 11400000, guid: f830ba42758fe426a86e33ea2284c326, type: 2}

@@ -72,9 +72,9 @@ ScriptedImporter:
     textureFormatSet: 0
     applyGammaDecoding: 0
   previousAsepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
-    layerImportMode: 1
+    layerImportMode: 0
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -85,9 +85,9 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   asepriteImporterSettings:
-    fileImportMode: 1
+    fileImportMode: 0
     importHiddenLayers: 0
-    layerImportMode: 1
+    layerImportMode: 0
     defaultPivotSpace: 0
     defaultPivotAlignment: 7
     customPivotPosition: {x: 0.5, y: 0.5}
@@ -98,7 +98,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 639054628265461580
+  platformSettingsDirtyTick: 639054684738689370
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -142,21 +142,41 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     uvTransform: {x: 4, y: 4}
-  spriteSheetImportData: []
+  spriteSheetImportData:
+  - name: mask anger_0
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 21
+      height: 26
+    spriteID: c132429e954b4b0f88c1346017da8a14
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
   asepriteLayers:
   - layerIndex: 0
     uuid:
-      value0: 1405343639
+      value0: 4287466680
       value1: 0
       value2: 0
       value3: 0
     guid: 0
-    name: mask anger
-    layerFlags: 0
+    name: Layer 1
+    layerFlags: 3
     layerType: 0
     blendMode: 0
     cells:
-    - name: mask anger
+    - name: Layer 1
       frameIndex: 0
       additiveSortOrder: 0
       cellRect:
@@ -164,7 +184,7 @@ ScriptedImporter:
         y: 68
         width: 21
         height: 26
-      spriteId: 84d552db153a07b878860ecf1bf37d87
+      spriteId: 2e861d5a6a3a0a17cbc136a581eaf65b
     linkedCells: []
     parentIndex: -1
   platformSettings:
