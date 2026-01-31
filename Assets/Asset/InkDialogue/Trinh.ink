@@ -1,7 +1,8 @@
 VAR overload_meter = 0.0
 
 EXTERNAL SetSpriteState(stateName) 
-    
+EXTERNAL ChangeBossSound(isActive) 
+
 -> Start_Interaction
 
 === Start_Interaction ===
@@ -68,6 +69,8 @@ Patient: "Đã vậy nha, dạo này cơm nước tui nấu ngon lành mà ổng
     -> End_Story_Stage
 
 === End_Story_Stage ===
+    ~ChangeBossSound(true)
+    
 Patient: "À mà bác sĩ ơi, cái này mới lạ nè. Mấy đêm nay ổng không ngủ. Tui kéo ổng vô buồng, đặt lưng xuống mà mắt ổng cứ mở trân trân nhìn lên trần nhà."
 Patient: "Tui vuốt mắt hoài mà ổng cứ mở lại. Ổng giận tui cái gì không biết? Tui có làm gì sai đâu."
 

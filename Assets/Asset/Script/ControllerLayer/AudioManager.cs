@@ -40,6 +40,10 @@ public class AudioManager : Singleton<AudioManager>
         bgmSource.clip = clip;
         bgmSource.Play();
     }
+    public void PlayBossTheme() {
+        bgmSource.clip = audioClips[5];
+        bgmSource.Play();
+    }
 
     public void StopMusic() {
         bgmSource.Stop();

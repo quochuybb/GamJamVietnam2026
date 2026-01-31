@@ -21,6 +21,7 @@ public class DiagnosisManager : Singleton<DiagnosisManager>
     [SerializeField] private GameObject panelScreen;
     [SerializeField] private GameObject analyzeButton;
     [SerializeField] private Button confirmButton; 
+    [SerializeField] private GameObject gameOverPanel;
     
     private bool isClosed = false;
 
@@ -227,10 +228,15 @@ public class DiagnosisManager : Singleton<DiagnosisManager>
     }
     private void GameOver(string reason)
     {
-        Debug.Log("GAME OVER: " + reason);
-        MainPanelController.Instance.OnBackToMainMenu();
+        gameOverPanel.SetActive(true);
         
     }
+
+    public void CloseGameOverPanel()
+    {
+        gameOverPanel.SetActive(false);
+    }
+    
     
     public void TakeNoteBook()
     {

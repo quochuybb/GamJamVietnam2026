@@ -86,6 +86,10 @@ public class InterrogationManager : Singleton<InterrogationManager>
             DiagnosisManager.Instance.TakeNoteBook();
             
         });
+        _story.BindExternalFunction("ChangeBossSound", (bool isActive) =>
+        {
+            AudioManager.Instance.PlayBossTheme();
+        });
     }
     private void CreateChoiceButtons()
     {

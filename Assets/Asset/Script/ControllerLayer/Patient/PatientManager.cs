@@ -1,13 +1,10 @@
     using System.Collections;
     using System.Collections.Generic;
-using Asset.Script.ControllerLayer;
-using UnityEngine;
+    using UnityEngine;
 
     public class PatientManager : Singleton<PatientManager>
     {
     [Header("Data")]
-        [Header("End Game Sequence")]
-        [SerializeField] private EndDaySequence endDaySequence; 
         public List<PatientProfileSO> dailyPatientList;
         public GameObject patientPrefab;
         public Transform spawnPoint;
@@ -82,20 +79,7 @@ using UnityEngine;
             }
             else
             {
-                Debug.Log("End of Game - Playing Credits");
-                
-                // --- NEW CODE HERE ---
-                if (endDaySequence != null)
-                {
-                    // We are already Faded Out (Black Screen) from step 1.
-                    // We can let the EndDaySequence handle the rest.
-                    endDaySequence.PlayCredits();
-                }
-                else
-                {
-                    // Fallback if script is missing
-                    MainPanelController.Instance.OnBackToMainMenu();
-                }
+                Debug.Log("Hết ngày!");
             }
         }
 
@@ -135,8 +119,7 @@ using UnityEngine;
             else
             {
                 Debug.Log("Hết bệnh nhân. End Day!");
-                MainPanelController.Instance.OnBackToMainMenu();
-                
+                // Bạn có thể hiện bảng tổng kết ngày ở đây
             }
         }
 
