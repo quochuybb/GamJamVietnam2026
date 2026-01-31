@@ -1,6 +1,7 @@
     using System.Collections;
     using System.Collections.Generic;
-    using UnityEngine;
+using Asset.Script.ControllerLayer;
+using UnityEngine;
 
     public class PatientManager : Singleton<PatientManager>
     {
@@ -119,6 +120,7 @@
             else
             {
                 Debug.Log("Hết bệnh nhân. End Day!");
+                MainPanelController.Instance.OnBackToMainMenu();
                 
             }
         }
