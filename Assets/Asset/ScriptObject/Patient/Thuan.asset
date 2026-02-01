@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Thuan
   inkJSONAsset: {fileID: 4900000, guid: e20e9580dc3fc2503a4c298485a9817c, type: 3}
+  description: "Thu\u1EADn, 20 tu\u1ED5i, H\u1ECDa s\u0129, Con nh\xE0 gi\xE0u "
   body: {fileID: 2158002969795506081, guid: e97fc2c33d5ab7cbabbe461984d1a6f5, type: 3}
   mask: {fileID: 7002171452344917096, guid: 4f72b342625047d0eb549da3810602c4, type: 3}
   emotion: 0

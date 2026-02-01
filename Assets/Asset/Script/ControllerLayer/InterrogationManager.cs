@@ -16,12 +16,15 @@ public class InterrogationManager : Singleton<InterrogationManager>
     [Header("External References")]
     [SerializeField] private PatientManager patientManager; 
     [SerializeField] private Button continueButton; 
+    [SerializeField] private Button descriptionPatient;
 
     private Story _story;
 
     public void StartSession(PatientProfileSO profile)
     {
         _story = new Story(profile.inkJSONAsset.text);
+        TextMeshProUGUI buttonText = descriptionPatient.GetComponentInChildren<TextMeshProUGUI>();
+        buttonText.text = profile.description;
         BindInkFunctions();
         
         dialogueText.text = "";

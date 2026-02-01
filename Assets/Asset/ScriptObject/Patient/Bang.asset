@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Bang
   inkJSONAsset: {fileID: 4900000, guid: 72d81050522277e25b05aa3c206cbdd7, type: 3}
+  description: "B\u1EB1ng, 28 tu\u1ED5i, B\xE1c s\u0129 th\xFA y. L\u1EDBn l\xEAn
+    t\u1EA1i tr\u1EA1i tr\u1EBB m\u1ED3 c\xF4i. Ti\u1EC1n s\u1EED: Ch\u01B0a ghi
+    nh\u1EADn "
   body: {fileID: -1275061360473359835, guid: c3181a40649e59565b1ec13d3c6239cd, type: 3}
   mask: {fileID: 6251424288037953153, guid: 6f22df3d16cc206beb1c1f17f5d26d54, type: 3}
   emotion: 2

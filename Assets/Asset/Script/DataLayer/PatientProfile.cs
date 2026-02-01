@@ -6,6 +6,7 @@ public class PatientProfileSO : ScriptableObject
 {
     public string id;
     public TextAsset inkJSONAsset;
+    public string description;
     public Sprite body;
     public Sprite mask;
     public Emotion emotion;

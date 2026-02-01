@@ -18,6 +18,8 @@ Doctor: "Chào chị Trinh. Cảm ơn chị về túi cam. Chị nói anh nhà d
 -> Surface_Story_Stage
 
 === Surface_Story_Stage ===
+~ SetSpriteState("sadness")
+
 Patient: "Thì nè, đi chợ về tui chào ổng cũng không thèm gật đầu. Cái mặt cứ trơ ra. Tui nghi ổng có bà nào khác ở ngoài quá. Mấy nay tui với ổng cứ lạnh tanh, không có chút lửa tình nào hết trơn á."
 
 + [A. "Bình tĩnh nào chị. Có thể anh ấy mệt thôi. Chị cảm thấy thế nào về sự thay đổi này?"]
@@ -28,22 +30,22 @@ Patient: "Thì nè, đi chợ về tui chào ổng cũng không thèm gật đ�
     -> Surface_Choice_C
 
 = Surface_Choice_A
-    ~ SetSpriteState("sad")
+    ~ SetSpriteState("sadness")
     Patient: "Tui... Tự nhiên tui thấy buồn hiu à, mà không biết sao lại buồn. Cứ như tui đã làm sai cái gì đó... Chắc tại tui nên ổng mới vậy."
     -> Middle_Story_Stage
 
 = Surface_Choice_B
-    ~ SetSpriteState("sad")
+    ~ SetSpriteState("sadness")
     Patient: "Thì ngày nào cũng vậy, ổng cứ ngồi trên cái ghế bành đó, còn chả thèm nhìn tui lấy một cái."
     -> Middle_Story_Stage
 
 = Surface_Choice_C
-    ~ SetSpriteState("sad")
+    ~ SetSpriteState("sadness")
     Patient: "Thì tối ngủ mà ổng để tui ngủ mình ên à, không có ôm tui gì nữa hết trơn. Chắc chắn là chê tui già rồi!"
     -> Middle_Story_Stage
 
 === Middle_Story_Stage ===
-~ SetSpriteState("angry")
+~ SetSpriteState("anger")
 Patient: "Đã vậy nha, dạo này cơm nước tui nấu ngon lành mà ổng không thèm đụng đũa. Cứ ngồi nhìn chằm chằm vào bát cơm. Tui tức quá, tui phải đút ổng mới chịu ăn đó bác sĩ!"
 
 + [A. "Chị chịu khó chăm sóc anh ấy thật. Có vẻ anh ấy vẫn ăn uống được là tốt rồi."]
@@ -70,7 +72,7 @@ Patient: "Đã vậy nha, dạo này cơm nước tui nấu ngon lành mà ổng
 
 === End_Story_Stage ===
     ~ChangeBossSound(true)
-    
+    ~ SetSpriteState("sadness")
 Patient: "À mà bác sĩ ơi, cái này mới lạ nè. Mấy đêm nay ổng không ngủ. Tui kéo ổng vô buồng, đặt lưng xuống mà mắt ổng cứ mở trân trân nhìn lên trần nhà."
 Patient: "Tui vuốt mắt hoài mà ổng cứ mở lại. Ổng giận tui cái gì không biết? Tui có làm gì sai đâu."
 
@@ -84,7 +86,7 @@ Doctor: "..."
     -> End_Choice_C
 
 = End_Choice_A
-    ~ SetSpriteState("sad")
+    ~ SetSpriteState("fearful")
     Patient: "Đi xa...? Ý bác sĩ là... ổng bỏ tui đi thật hả? Hèn chi... hèn chi người ổng lạnh quá bác sĩ ơi..."
     Patient: "Ông ơi... sao ông bỏ tui nằm lại đó một mình... tui biết sống sao đây..."
     Doctor: "Chị Trinh đã gục ngã khi nhận ra sự thật. Tôi đã gọi đội ngũ y tế đưa chị đi chăm sóc đặc biệt."
@@ -92,7 +94,7 @@ Doctor: "..."
     -> Ready_For_Diagnose
 
 = End_Choice_B
-    ~ SetSpriteState("surprise")
+    ~ SetSpriteState("suprised")
     Patient: "Bệnh nặng hả bác sĩ? Chết cha, để tui về coi ổng liền? Dạ tui cảm ơn bác sĩ nhiều, tui về gấp đây!"
     
     Doctor: "Chị ấy hối hả rời đi. Tôi cảm thấy có điều gì đó không ổn và cần phải đưa ra quyết định."
@@ -108,7 +110,7 @@ Doctor: "..."
         -> Ready_For_Diagnose
 
 = End_Choice_C
-    ~ SetSpriteState("surprise")
+    ~ SetSpriteState("suprised")
     Patient: "KHÔNG!!! Ông nói bậy! Ổng còn sống! Ổng đang đợi tui về nấu cơm! Đồ bác sĩ lừa đảo!"
     
     Doctor: "Chị ấy hét lên rồi lao ra khỏi phòng khám. Một tiếng va chạm lớn vang lên ngay sau đó."

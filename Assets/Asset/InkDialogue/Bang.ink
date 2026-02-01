@@ -53,7 +53,7 @@ Patient: "Nhiều khi tôi ước mình cứ thế mà tan biến đi cho rồi.
 
 === Middle_Story_Stage ===
 // [Notebook Appear]
-~ SetSpriteState("happy")
+~ SetSpriteState("anger")
 Patient: "Nhưng mà anh biết không... dạo này ở phòng khám, mọi thứ cứ vụt vụt vụt qua mặt tôi. Tôi mổ cho chó mèo mà tay tôi làm nhanh hơn cả não."
 Patient: "Đồng nghiệp cứ kêu tôi chậm lại, bảo tôi nghỉ ngơi đi. Nhưng tôi thấy có cần thiết đâu? Tôi đang sung sức mà!"
 // (⇒ B5 - Excess Energy / C4 - Racing Thoughts)
@@ -88,7 +88,7 @@ Patient: "Đồng nghiệp cứ kêu tôi chậm lại, bảo tôi nghỉ ngơi 
 
 === End_Story_Stage ===
 // [Notebook Appear]
-~ SetSpriteState("sadness")
+~ SetSpriteState("suprised")
 Patient: "Hồi đầu tôi thương bọn động vật lắm, con nào đau là tôi khóc theo. Nhưng dạo gần đây... tôi nhìn chúng nó giãy chết trước mặt mà lòng tôi… chả cảm thấy gì cả."
 Patient: "Cứ như tôi đang mổ xẻ mấy con gấu bông vô tri vậy."
 // (⇒ E1 - Emotional Numbness)
@@ -101,7 +101,7 @@ Patient: "Cứ như tôi đang mổ xẻ mấy con gấu bông vô tri vậy."
     -> End_Choice_C
 
 = End_Choice_A
-    ~ SetSpriteState("sadness")
+    ~ SetSpriteState("suprised")
     Patient: "Thương xót? Tôi cố tìm cái cảm giác đó mà không thấy đâu cả. Tôi nhìn vào mắt chúng nó và chỉ thấy... trống rỗng. Máu chảy hay tim ngừng đập, với tôi giờ chẳng khác gì nhau."
     // (⇒ E1 - Emotional Numbness)
     -> Ready_For_Diagnose

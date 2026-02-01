@@ -1,6 +1,8 @@
     using System.Collections;
     using System.Collections.Generic;
+    using TMPro;
     using UnityEngine;
+    using UnityEngine.UI;
 
     public class PatientManager : Singleton<PatientManager>
     {
@@ -12,6 +14,7 @@
         [Header("UI Fader")]
         [SerializeField] private CanvasGroup faderCanvasGroup; // Kéo thả Canvas Group của Image đen vào đây
         [SerializeField] private float fadeDuration = 0.8f;
+        [SerializeField] private EndDaySequence endDaySequence;
         [Header("Systems")]
 
         private GameObject patientInstance; 
@@ -34,8 +37,10 @@
 
         public void NextPatient()
         {
+
             StartCoroutine(SwitchPatientRoutine());
         }
+        
         public void PlayWinCutscene()
         {
             StartCoroutine(WinSequenceRoutine());
@@ -68,7 +73,7 @@
                 PatientProfileSO nextData = dailyPatientList[currentIndex];
                 patientVisual.PrepareData(nextData);
         
-                yield return new WaitForSeconds(0.5f); // Nghỉ một chút giữa 2 bệnh nhân
+                yield return new WaitForSeconds(0.5f); // Nghỉ một chút giữa  2 bệnh nhân
 
                 patientInstance.SetActive(true);
                 InterrogationManager.Instance.StartSession(nextData);
@@ -80,6 +85,7 @@
             else
             {
                 Debug.Log("Hết ngày!");
+                endDaySequence.PlayCredits();
             }
         }
 
@@ -110,17 +116,21 @@
 
                 patientInstance.SetActive(true);
                 InterrogationManager.Instance.StartSession(nextData);
+
                 
                 currentIndex++;
 
                 // 4. Fade IN (Màn hình sáng lại)
                 yield return StartCoroutine(Fade(0f));
+                
+                
             }
             else
             {
                 Debug.Log("Hết bệnh nhân. End Day!");
-                // Bạn có thể hiện bảng tổng kết ngày ở đây
+                
             }
+
         }
 
         private IEnumerator Fade(float targetAlpha)
